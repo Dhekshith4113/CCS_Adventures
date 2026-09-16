@@ -1,0 +1,10 @@
+"./F2837xD_CodeStartBranch.obj"
+"./F2837xD_GlobalVariableDefs.obj"
+"./F2837xD_Gpio.obj"
+"./F2837xD_SysCtrl.obj"
+"./F2837xD_usDelay.obj"
+"./Lab1_Series_F28379D.obj"
+"./functions.obj"
+"../2837xD_RAM_lnk_cpu1.cmd"
+"../F2837xD_Headers_nonBIOS_cpu1.cmd"
+-llibc.a
