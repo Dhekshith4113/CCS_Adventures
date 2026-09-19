@@ -15,12 +15,13 @@ ORDERED_OBJS += \
 "./F2837xD_Gpio.obj" \
 "./F2837xD_SysCtrl.obj" \
 "./F2837xD_usDelay.obj" \
-"./Lab1_Series_F28379D.obj" \
+"./Lab1_Series_F28379D_IQ.obj" \
 "./functions.obj" \
 "../2837xD_RAM_lnk_cpu1.cmd" \
 "../F2837xD_Headers_nonBIOS_cpu1.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
+-l"C:/ti/c2000/C2000Ware_26_01_00_00/libraries/math/IQmath/c28/lib/IQmath_fpu32.lib" \
 
 -include ../makefile.init
 
@@ -134,15 +135,15 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Tool invocations
 Lab_Task_01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'C2000 Linker - building target: "$@"'
-	"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=_LAUNCHXL_F28379D --define=CPU1 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"Lab_Task_01.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/lib" -i"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="Lab_Task_01_linkInfo.xml" --rom_model -o "Lab_Task_01.out" $(ORDERED_OBJS)
+	"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=_LAUNCHXL_F28379D --define=CPU1 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"Lab_Task_01.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/lib" -i"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include" -i"C:/ti/c2000/C2000Ware_26_01_00_00/libraries/math/IQmath/c28/lib" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="Lab_Task_01_linkInfo.xml" --rom_model -o "Lab_Task_01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xD_CodeStartBranch.obj" "F2837xD_GlobalVariableDefs.obj" "F2837xD_Gpio.obj" "F2837xD_SysCtrl.obj" "F2837xD_usDelay.obj" "Lab1_Series_F28379D.obj" "functions.obj" 
-	-$(RM) "F2837xD_GlobalVariableDefs.d" "F2837xD_Gpio.d" "F2837xD_SysCtrl.d" "Lab1_Series_F28379D.d" "functions.d" 
+	-$(RM) "F2837xD_CodeStartBranch.obj" "F2837xD_GlobalVariableDefs.obj" "F2837xD_Gpio.obj" "F2837xD_SysCtrl.obj" "F2837xD_usDelay.obj" "Lab1_Series_F28379D_IQ.obj" "functions.obj" 
+	-$(RM) "F2837xD_GlobalVariableDefs.d" "F2837xD_Gpio.d" "F2837xD_SysCtrl.d" "Lab1_Series_F28379D_IQ.d" "functions.d" 
 	-$(RM) "F2837xD_CodeStartBranch.d" "F2837xD_usDelay.d" 
 	-@echo ' '
 

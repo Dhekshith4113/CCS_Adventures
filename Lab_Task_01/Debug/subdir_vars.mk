@@ -17,14 +17,14 @@ C_SRCS += \
 ../F2837xD_GlobalVariableDefs.c \
 ../F2837xD_Gpio.c \
 ../F2837xD_SysCtrl.c \
-../Lab1_Series_F28379D.c \
+../Lab1_Series_F28379D_IQ.c \
 ../functions.c 
 
 C_DEPS += \
 ./F2837xD_GlobalVariableDefs.d \
 ./F2837xD_Gpio.d \
 ./F2837xD_SysCtrl.d \
-./Lab1_Series_F28379D.d \
+./Lab1_Series_F28379D_IQ.d \
 ./functions.d 
 
 OBJS += \
@@ -33,7 +33,7 @@ OBJS += \
 ./F2837xD_Gpio.obj \
 ./F2837xD_SysCtrl.obj \
 ./F2837xD_usDelay.obj \
-./Lab1_Series_F28379D.obj \
+./Lab1_Series_F28379D_IQ.obj \
 ./functions.obj 
 
 ASM_DEPS += \
@@ -46,14 +46,14 @@ OBJS__QUOTED += \
 "F2837xD_Gpio.obj" \
 "F2837xD_SysCtrl.obj" \
 "F2837xD_usDelay.obj" \
-"Lab1_Series_F28379D.obj" \
+"Lab1_Series_F28379D_IQ.obj" \
 "functions.obj" 
 
 C_DEPS__QUOTED += \
 "F2837xD_GlobalVariableDefs.d" \
 "F2837xD_Gpio.d" \
 "F2837xD_SysCtrl.d" \
-"Lab1_Series_F28379D.d" \
+"Lab1_Series_F28379D_IQ.d" \
 "functions.d" 
 
 ASM_DEPS__QUOTED += \
@@ -68,7 +68,7 @@ C_SRCS__QUOTED += \
 "../F2837xD_GlobalVariableDefs.c" \
 "../F2837xD_Gpio.c" \
 "../F2837xD_SysCtrl.c" \
-"../Lab1_Series_F28379D.c" \
+"../Lab1_Series_F28379D_IQ.c" \
 "../functions.c" 
 
 

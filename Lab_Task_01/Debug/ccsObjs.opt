@@ -3,8 +3,9 @@
 "./F2837xD_Gpio.obj"
 "./F2837xD_SysCtrl.obj"
 "./F2837xD_usDelay.obj"
-"./Lab1_Series_F28379D.obj"
+"./Lab1_Series_F28379D_IQ.obj"
 "./functions.obj"
 "../2837xD_RAM_lnk_cpu1.cmd"
 "../F2837xD_Headers_nonBIOS_cpu1.cmd"
 -llibc.a
+-l"C:/ti/c2000/C2000Ware_26_01_00_00/libraries/math/IQmath/c28/lib/IQmath_fpu32.lib"

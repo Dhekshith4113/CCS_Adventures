@@ -5,6 +5,7 @@
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C2000.Debug.2020903849" moduleId="org.eclipse.cdt.core.settings" name="Debug">
                 <macros>
                     <stringMacro name="Lab_01_160926" type="VALUE_TEXT" value="C:\ti\c2000\C2000Ware_26_01_00_00"/>
+                    <stringMacro name="Lab_01_IQ" type="VALUE_TEXT" value="C:\ti\c2000\C2000Ware_26_01_00_00\libraries\math\IQmath\c28"/>
                 </macros>
                 <externalSettings/>
                 <extensions>
@@ -51,6 +52,7 @@
                                     <listOptionValue value="${CG_TOOL_ROOT}/include"/>
                                     <listOptionValue value="${Lab_01_160926}/device_support/f2837xd/headers/include"/>
                                     <listOptionValue value="${Lab_01_160926}/device_support/f2837xd/common/include"/>
+                                    <listOptionValue value="${Lab_01_IQ}/include"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_25.11.compilerID.ABI.1786875392" superClass="com.ti.ccstudio.buildDefinitions.C2000_25.11.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C2000_25.11.compilerID.ABI.coffabi" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_25.11.compilerID.DEFINE.107371550" superClass="com.ti.ccstudio.buildDefinitions.C2000_25.11.compilerID.DEFINE" valueType="definedSymbols">
@@ -72,17 +74,19 @@
                                     <listOptionValue value="${COM_TI_C2000WARE_LIBRARY_PATH}"/>
                                     <listOptionValue value="${CG_TOOL_ROOT}/lib"/>
                                     <listOptionValue value="${CG_TOOL_ROOT}/include"/>
+                                    <listOptionValue value="${Lab_01_IQ}/lib"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_25.11.linkerID.LIBRARY.1080715425" superClass="com.ti.ccstudio.buildDefinitions.C2000_25.11.linkerID.LIBRARY" valueType="libs">
                                     <listOptionValue value="${COM_TI_C2000WARE_LIBRARIES}"/>
                                     <listOptionValue value="libc.a"/>
+                                    <listOptionValue value="${Lab_01_IQ}/lib/IQmath_fpu32.lib"/>
                                 </option>
                             </tool>
                             <tool id="com.ti.ccstudio.buildDefinitions.C2000_25.11.hex.567228607" name="C2000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_25.11.hex"/>
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="2837x_FLASH_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="Lab1_Series_F28379D.c|Led_Blink_Test.c|2837x_FLASH_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>
