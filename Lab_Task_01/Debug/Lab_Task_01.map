@@ -1,10 +1,10 @@
 ******************************************************************************
              TMS320C2000 Linker PC v25.11.1                    
 ******************************************************************************
->> Linked Sat Sep 19 12:32:58 2026
+>> Linked Wed Sep 23 12:14:47 2026
 
 OUTPUT FILE NAME:   <Lab_Task_01.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 00008149
+ENTRY POINT SYMBOL: "_c_int00"  address: 00008136
 
 
 MEMORY CONFIGURATION
@@ -14,7 +14,7 @@ MEMORY CONFIGURATION
 PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM0                 00000123   000002dd  0000003e  0000029f  RWIX
-  RAMLS0                00008000   00000800  00000317  000004e9  RWIX
+  RAMLS0                00008000   00000800  00000304  000004fc  RWIX
   RAMLS1                00008800   00000800  00000000  00000800  RWIX
   RAMLS2                00009000   00000800  00000000  00000800  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
@@ -668,21 +668,21 @@ UidRegsFile
 IQmath     0    0000014b    00000016     
                   0000014b    00000016     IQmath_fpu32_coff.lib : IQ24toF.obj (IQmath)
 
-.text.1    0    00008000    00000317     
-                  00008000    00000149     functions.obj (.text)
-                  00008149    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
-                  0000819f    00000044     Lab1_Series_F28379D_IQ.obj (.text)
-                  000081e3    0000002a     rts2800_fpu32.lib : l_div28.asm.obj (.text)
-                  0000820d    00000029                       : exit.c.obj (.text)
-                  00008236    00000024                       : cpy_tbl.c.obj (.text)
-                  0000825a    00000022                       : i_div28.asm.obj (.text)
-                  0000827c    00000020                       : memcpy.c.obj (.text)
-                  0000829c    0000001f                       : fd_tol28.asm.obj (.text)
-                  000082bb    0000001d                       : i_tofd28.asm.obj (.text)
-                  000082d8    0000001c                       : fs_tofdfpu32.asm.obj (.text)
-                  000082f4    00000012                       : args_main.c.obj (.text)
-                  00008306    00000009                       : _lock.c.obj (.text)
-                  0000830f    00000008     F2837xD_CodeStartBranch.obj (.text)
+.text.1    0    00008000    00000304     
+                  00008000    00000136     functions.obj (.text)
+                  00008136    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
+                  0000818c    00000044     Lab1_Series_F28379D_IQ.obj (.text)
+                  000081d0    0000002a     rts2800_fpu32.lib : l_div28.asm.obj (.text)
+                  000081fa    00000029                       : exit.c.obj (.text)
+                  00008223    00000024                       : cpy_tbl.c.obj (.text)
+                  00008247    00000022                       : i_div28.asm.obj (.text)
+                  00008269    00000020                       : memcpy.c.obj (.text)
+                  00008289    0000001f                       : fd_tol28.asm.obj (.text)
+                  000082a8    0000001d                       : i_tofd28.asm.obj (.text)
+                  000082c5    0000001c                       : fs_tofdfpu32.asm.obj (.text)
+                  000082e1    00000012                       : args_main.c.obj (.text)
+                  000082f3    00000009                       : _lock.c.obj (.text)
+                  000082fc    00000008     F2837xD_CodeStartBranch.obj (.text)
 
 .text.2    0    0000b000    000007fd     
                   0000b000    000004ab     F2837xD_SysCtrl.obj (.text)
@@ -700,12 +700,12 @@ MODULE SUMMARY
        F2837xD_GlobalVariableDefs.obj   0      0                  9870              
        F2837xD_SysCtrl.obj              1195   0                  0                 
        F2837xD_Gpio.obj                 580    0                  0                 
-       functions.obj                    329    4                  0                 
+       functions.obj                    310    4                  0                 
        Lab1_Series_F28379D_IQ.obj       68     14                 8                 
        F2837xD_CodeStartBranch.obj      10     0                  0                 
        F2837xD_usDelay.obj              4      0                  0                 
     +--+--------------------------------+------+------------------+--------------------+
-       Total:                           2186   18                 9878              
+       Total:                           2167   18                 9878              
                                                                                     
     C:\ti\c2000\C2000Ware_26_01_00_00\libraries\math\IQmath\c28\lib\IQmath_fpu32_coff.lib
        IQ24toF.obj                      22     0                  0                 
@@ -733,7 +733,7 @@ MODULE SUMMARY
                                                                                     
        Stack:                           0      0                  512               
     +--+--------------------------------+------+------------------+--------------------+
-       Grand Total:                     2864   42                 10400             
+       Grand Total:                     2845   42                 10400             
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -951,18 +951,18 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                                  
 ----  -------   ----                                  
 abs   ffffffff  .text                                 
-0     0000820d  C$$EXIT                               
+0     000081fa  C$$EXIT                               
 0     0000b777  FD$$MPY                               
-0     0000829c  FD$$TOL                               
+0     00008289  FD$$TOL                               
 0     0000b6ef  FS$$DIV                               
-0     000082d8  FS$$TOFD                              
-0     0000825a  I$$DIV                                
-0     0000826b  I$$MOD                                
-0     000082bb  I$$TOFD                               
-0     000081e3  L$$DIV                                
-0     000081f2  L$$MOD                                
-0     00008200  UL$$DIV                               
-0     00008207  UL$$MOD                               
+0     000082c5  FS$$TOFD                              
+0     00008247  I$$DIV                                
+0     00008258  I$$MOD                                
+0     000082a8  I$$TOFD                               
+0     000081d0  L$$DIV                                
+0     000081df  L$$MOD                                
+0     000081ed  UL$$DIV                               
+0     000081f4  UL$$MOD                               
 1     0005f4c0  _AccessProtectionRegs                 
 1     00007400  _AdcaRegs                             
 1     00000b00  _AdcaResultRegs                       
@@ -1122,21 +1122,21 @@ abs   ffffffff  ___c_args__
 abs   ffffffff  ___etext__                            
 abs   ffffffff  ___pinit__                            
 abs   ffffffff  ___text__                             
-0     000082f4  __args_main                           
+0     000082e1  __args_main                           
 1     0000a80e  __lock                                
-0     0000830e  __nop                                 
-0     0000830a  __register_lock                       
-0     00008306  __register_unlock                     
+0     000082fb  __nop                                 
+0     000082f7  __register_lock                       
+0     000082f3  __register_unlock                     
 1     00000400  __stack                               
 0     0000b7fc  __system_post_cinit                   
 0     0000b7fa  __system_pre_init                     
 1     0000a810  __unlock                              
-0     0000820d  _abort                                
-0     00008149  _c_int00                              
-0     00008236  _copy_in                              
-0     0000820f  _exit                                 
-0     0000819f  _main                                 
-0     0000827c  _memcpy                               
+0     000081fa  _abort                                
+0     00008136  _c_int00                              
+0     00008223  _copy_in                              
+0     000081fc  _exit                                 
+0     0000818c  _main                                 
+0     00008269  _memcpy                               
 0     00008000  _nlog_f32                             
 0     000080a7  _nlog_iq                              
 1     0000a802  _result_float                         
@@ -1165,26 +1165,26 @@ page  address   name
 0     00008053  _sqrt_f32                             
 0     000080a7  _nlog_iq                              
 0     000080de  _sqrt_iq                              
-0     00008149  _c_int00                              
-0     0000819f  _main                                 
-0     000081e3  L$$DIV                                
-0     000081f2  L$$MOD                                
-0     00008200  UL$$DIV                               
-0     00008207  UL$$MOD                               
-0     0000820d  C$$EXIT                               
-0     0000820d  _abort                                
-0     0000820f  _exit                                 
-0     00008236  _copy_in                              
-0     0000825a  I$$DIV                                
-0     0000826b  I$$MOD                                
-0     0000827c  _memcpy                               
-0     0000829c  FD$$TOL                               
-0     000082bb  I$$TOFD                               
-0     000082d8  FS$$TOFD                              
-0     000082f4  __args_main                           
-0     00008306  __register_unlock                     
-0     0000830a  __register_lock                       
-0     0000830e  __nop                                 
+0     00008136  _c_int00                              
+0     0000818c  _main                                 
+0     000081d0  L$$DIV                                
+0     000081df  L$$MOD                                
+0     000081ed  UL$$DIV                               
+0     000081f4  UL$$MOD                               
+0     000081fa  C$$EXIT                               
+0     000081fa  _abort                                
+0     000081fc  _exit                                 
+0     00008223  _copy_in                              
+0     00008247  I$$DIV                                
+0     00008258  I$$MOD                                
+0     00008269  _memcpy                               
+0     00008289  FD$$TOL                               
+0     000082a8  I$$TOFD                               
+0     000082c5  FS$$TOFD                              
+0     000082e1  __args_main                           
+0     000082f3  __register_unlock                     
+0     000082f7  __register_lock                       
+0     000082fb  __nop                                 
 0     0000b000  _InitSysCtrl                          
 0     0000b020  _InitPeripheralClocks                 
 0     0000b0a4  _DisablePeripheralClocks              

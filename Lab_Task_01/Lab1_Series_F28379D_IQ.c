@@ -13,25 +13,25 @@ void main(void)
 
     x_iq = _IQ(x);                              	// Convert the test variable to IQ24 format
 
-    EALLOW;
-	GpioCtrlRegs.GPAGMUX1.bit.GPIO6 = 0;            // 
-	GpioCtrlRegs.GPAMUX1.bit.GPIO6  = 0;  			// 
-	GpioCtrlRegs.GPADIR.bit.GPIO6 = 1;				// Set direction as output
+	EALLOW;
+	GpioCtrlRegs.GPAGMUX2.bit.GPIO25 = 0;			// 
+	GpioCtrlRegs.GPAMUX2.bit.GPIO25  = 0;  			// 
+	GpioCtrlRegs.GPADIR.bit.GPIO25   = 1;			// Set direction as output
 	EDIS;
 
 	while(1) {
-		DELAY_US(100);								// Wait for 100 microseconds
-
-        GpioDataRegs.GPATOGGLE.bit.GPIO6 = 1;		// Set pin 6 to HIGH
-		result_iq = nlog_iq(x_iq);					// Compute ln(x) using IQ math
-		result_float = _IQtoF(result_iq);			// Convert result to float 
-        GpioDataRegs.GPACLEAR.bit.GPIO6 = 1;		// Set pin 6 to LOW
-
 		// DELAY_US(100);								// Wait for 100 microseconds
-        
-        // GpioDataRegs.GPATOGGLE.bit.GPIO6 = 1;		// Set pin 6 to HIGH
-		// result_iq = sqrt_iq(x_iq);					// Compute sqrt(x) using IQ math
+
+        // GpioDataRegs.GPASET.bit.GPIO25 = 1;		// Set pin 6 to HIGH
+		// result_iq = nlog_iq(x_iq);					// Compute ln(x) using IQ math
 		// result_float = _IQtoF(result_iq);			// Convert result to float 
-        // GpioDataRegs.GPACLEAR.bit.GPIO6 = 1;		// Set pin 6 to LOW
+        // GpioDataRegs.GPACLEAR.bit.GPIO25 = 1;		// Set pin 6 to LOW
+
+		DELAY_US(100);								// Wait for 100 microseconds
+        
+        GpioDataRegs.GPASET.bit.GPIO25 = 1;		// Set pin 6 to HIGH
+		result_iq = sqrt_iq(x_iq);					// Compute sqrt(x) using IQ math
+		result_float = _IQtoF(result_iq);			// Convert result to float 
+        GpioDataRegs.GPACLEAR.bit.GPIO25 = 1;		// Set pin 6 to LOW
 	}
 }
